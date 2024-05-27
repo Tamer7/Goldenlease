@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L,QSA]
+
+Order Allow,Deny
+Deny from 120.0.0.0/8
+Deny from 121.0.0.0/8
+Deny from 122.0.0.0/8
+Deny from 123.0.0.0/8
+Allow from all
